@@ -28,7 +28,7 @@ exports.convertNumberToBinary = (number) => {
         }
         operator /= 2
     }
-    return `The binary code is: ${bin}`
+    return bin
 }
 
 
