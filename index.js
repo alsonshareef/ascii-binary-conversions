@@ -11,5 +11,5 @@ let {
 // console.log(convertStringToAsciiCode())
 // console.log(convertAsciiCodeToString())
 // console.log((convertNumberToBinary()))
-// console.log(convertBinarytoByteArray(''))
+console.log(convertBinarytoByteArray('10101010101010101010'))
 // console.log(convertBinaryToNumber('11111111'))
