@@ -10,8 +10,8 @@ exports.convertStringToAsciiCode = (word) => {
 
 
 // Ascii => String
-exports.convertAsciiCodeToString = () => {
-
+exports.convertAsciiCodeToString = (ascii) => {
+    
 }
 
 

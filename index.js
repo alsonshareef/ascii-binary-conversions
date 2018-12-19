@@ -8,7 +8,7 @@ let {
 
 
 // Run
-console.log(convertStringToAsciiCode('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'))
+// console.log(convertStringToAsciiCode())
 // console.log(convertAsciiCodeToString())
 // console.log((convertNumberToBinary()))
 // console.log(convertBinarytoByteArray(''))
