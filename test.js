@@ -2,28 +2,41 @@ let {
     convertStringToAsciiCodeArray,
     convertAsciiCodeArrayToString,
     convertNumberToBinary,
-    convertBinaryToNumber
+    convertBinaryToNumber,
+    convertBinarytoByteArray
 } = require('./functions')
 
 
+// **** UNIT TESTS **** //
 
 // TEST function for String => Ascii
+
 
 
 // TEST function for Ascii => String
 
 
 // TEST function for Number => Binary
-let testNumbers = [255, 0, 128, 64, 32, 16, 8, 4, 2, 1]
-let expectedOutput = ['11111111', '00000000', '10000000', '01000000', '00100000', '00010000', '00001000', '00000100', '00000010', '00000001']
-
-for(let i = 0; i < testNumbers.length; i++){
-    if(convertNumberToBinary(testNumbers[i]) === expectedOutput[i]){
-        console.log('** PASSED **')
-    } else {
-        console.log('** FAILED **')
+let testNumbertoBinary = () => {
+    let testNumbers = [255, 0, 128, 64, 32, 16, 8, 4, 2, 1],
+    expectedOutput = ['11111111', '0', '10000000', '1000000', '100000', '10000', '1000', '100', '10', '1']
+    
+    for(let i = 0; i < testNumbers.length; i++){
+        if(convertNumberToBinary(testNumbers[i]) === expectedOutput[i]){
+            console.log(`** PASSED ** The returned value from 'Number to Binary' function is EQUAL to expected output`)
+        } else {
+            console.log(`** FAILED ** The returned value from 'Number to Binary' function is NOT EQUAL to expected output`)
+        }
     }
 }
 
+testNumbertoBinary()
 
 // TEST function for Binary => Number
+
+
+// TEST Binary to Byte Array
+
+
+
+// **** INTEGRATION TESTS **** //

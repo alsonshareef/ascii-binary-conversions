@@ -2,12 +2,14 @@ let {
     convertStringToAsciiCodeArray,
     convertAsciiCodeArrayToString,
     convertNumberToBinary,
-    convertBinaryToNumber
+    convertBinaryToNumber,
+    convertBinarytoByteArray
 } = require('./functions')
 
 
 // Run
 // console.log(convertStringToAsciiCodeArray('Shareef'))
-console.log(convertNumberToBinary(10))
 // console.log(convertAsciiCodeArrayToString())
-// console.log(convertBinaryToNumber())
+// console.log((convertNumberToBinary()))
+// console.log(convertBinarytoByteArray(''))
+// console.log(convertBinaryToNumber('11111111'))
