@@ -1,6 +1,6 @@
 let {
-    convertStringToAsciiCodeArray,
-    convertAsciiCodeArrayToString,
+    convertStringToAsciiCode,
+    convertAsciiCodeToString,
     convertNumberToBinary,
     convertBinaryToNumber,
     convertBinarytoByteArray
@@ -8,8 +8,8 @@ let {
 
 
 // Run
-// console.log(convertStringToAsciiCodeArray('Shareef'))
-// console.log(convertAsciiCodeArrayToString())
+console.log(convertStringToAsciiCode('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'))
+// console.log(convertAsciiCodeToString())
 // console.log((convertNumberToBinary()))
 // console.log(convertBinarytoByteArray(''))
 // console.log(convertBinaryToNumber('11111111'))

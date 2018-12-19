@@ -1,16 +1,16 @@
 
 // String => Ascii
-exports.convertStringToAsciiCodeArray = (word) => {
+exports.convertStringToAsciiCode = (word) => {
     let output = []
     for(let i = 0; i < word.length; i++){
-        output.push(`${word[i]}: ` + word.charCodeAt(i).toString())
+        output.push(word.charCodeAt(i).toString())
     }
     return output
 }
 
 
 // Ascii => String
-exports.convertAsciiCodeArrayToString = () => {
+exports.convertAsciiCodeToString = () => {
 
 }
 
