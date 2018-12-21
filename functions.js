@@ -10,8 +10,12 @@ exports.convertStringToAsciiCode = (word) => {
 
 
 // Ascii => String
-exports.convertAsciiCodeToString = (ascii) => {
-    
+exports.convertAsciiCodeToString = (...ascii) => {
+    let output = []
+    for(let i = 0; i < ascii.length; i++){
+        output.push(String.fromCharCode(ascii[i]))
+    }
+    return output
 }
 
 

@@ -27,6 +27,11 @@ let {
 
 
 // TEST function for Ascii => String
+    let testAsciitoString = () => {
+        
+    }
+
+    testAsciitoString()
 
 
 // TEST function for Number => Binary
@@ -47,36 +52,36 @@ let {
 
 
 // TEST Binary to Byte Array
-let testBinarytoByteArray = () => {
-    let testBinaryNumbers = ['00000000000000000000', '10000000000000011000', '11000000000000111100', '11100000000001111110', '11110000000011111111', '11111000000111111111', '10101010101010101010'],
+    let testBinarytoByteArray = () => {
+        let testBinaryNumbers = ['00000000000000000000', '10000000000000011000', '11000000000000111100', '11100000000001111110', '11110000000011111111', '11111000000111111111', '10101010101010101010'],
 
-    expectedOutput = [[ '00000000', '00000000', '00000000' ], [ '00001000', '00000000', '00011000' ], [ '00001100', '00000000', '00111100' ], [ '00001110', '00000000', '01111110' ], [ '00001111', '00000000', '11111111' ], [ '00001111', '10000001', '11111111' ], [ '00001010', '10101010', '10101010' ]]
+        expectedOutput = [[ '00000000', '00000000', '00000000' ], [ '00001000', '00000000', '00011000' ], [ '00001100', '00000000', '00111100' ], [ '00001110', '00000000', '01111110' ], [ '00001111', '00000000', '11111111' ], [ '00001111', '10000001', '11111111' ], [ '00001010', '10101010', '10101010' ]]
 
-    for(let i = 0; i < testBinaryNumbers.length; i++){
-        if (convertBinarytoByteArray(testBinaryNumbers[i]).toString() === expectedOutput[i].toString()) {
-            console.log(`** PASSED ** The returned value from 'Binary to Byte Array' function is EQUAL to expected output`)
-        } else {
-            console.log(`** FAILED ** The returned value from 'Binary to Byte Array' function is NOT EQUAL to expected output`)
+        for(let i = 0; i < testBinaryNumbers.length; i++){
+            if (convertBinarytoByteArray(testBinaryNumbers[i]).toString() === expectedOutput[i].toString()) {
+                console.log(`** PASSED ** The returned value from 'Binary to Byte Array' function is EQUAL to expected output`)
+            } else {
+                console.log(`** FAILED ** The returned value from 'Binary to Byte Array' function is NOT EQUAL to expected output`)
+            }
         }
     }
-}
 
-testBinarytoByteArray()
+// testBinarytoByteArray()
 
 
 // TEST Binary => Number 
-let testBinarytoNumber = () => {
-    let testBinaryNumbers = ['11111111', '0', '10000000', '1000000', '100000', '10000', '1000', '100', '10', '1'],
-    expectedOutput = [255, 0, 128, 64, 32, 16, 8, 4, 2, 1]
+    let testBinarytoNumber = () => {
+        let testBinaryNumbers = ['11111111', '0', '10000000', '1000000', '100000', '10000', '1000', '100', '10', '1'],
+        expectedOutput = [255, 0, 128, 64, 32, 16, 8, 4, 2, 1]
 
-    for(let i = 0; i < testBinaryNumbers.length; i++){
-        if (convertBinaryToNumber(testBinaryNumbers[i]) === expectedOutput[i]) {
-            console.log(`** PASSED ** The returned value from 'Binary to Number' function is EQUAL to expected output`)
-        } else {
-            console.log(`** FAILED ** The returned value from 'Binary to Number' function is NOT EQUAL to expected output`)
+        for(let i = 0; i < testBinaryNumbers.length; i++){
+            if (convertBinaryToNumber(testBinaryNumbers[i]) === expectedOutput[i]) {
+                console.log(`** PASSED ** The returned value from 'Binary to Number' function is EQUAL to expected output`)
+            } else {
+                console.log(`** FAILED ** The returned value from 'Binary to Number' function is NOT EQUAL to expected output`)
+            }
         }
     }
-}
 
 // testBinarytoNumber()
 
