@@ -28,7 +28,16 @@ let {
 
 // TEST function for Ascii => String
     let testAsciitoString = () => {
-        
+        let testString = [ '97', '98', '99', '100', '101', '102', '103', '104', '105', '106', '107', '108', '109', '110', '111', '112', '113', '114', '115', '116', '117', '118', '119', '120', '121', '122', '65', '66', '67', '68', '69', '70', '71', '72', '73', '74', '75', '76', '77', '78', '79', '80', '81', '82', '83', '84', '85', '86', '87', '88', '89', '90' ],
+        expectedOutput = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+
+        for (let i = 0; i < testString.length; i++) {
+            if (convertAsciiCodeToString(testString[i]).join('') === expectedOutput[i]) {
+                console.log(`** PASSED ** The returned value from 'Ascii to String' function is EQUAL to expected output`)
+            } else {
+                console.log(`** FAILED ** The returned value from 'Ascii to String' function is NOT EQUAL to expected output`)
+            }
+        }
     }
 
     testAsciitoString()
