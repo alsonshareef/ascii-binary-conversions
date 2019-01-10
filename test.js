@@ -6,6 +6,8 @@ let {
     convertBinarytoByteArray
 } = require('./functions')
 
+let {encoder, decoder} = require('D:\\Code\\Personal Projects\\encoder-js\\functions.js')
+
 
 // **** UNIT TESTS **** //
 
@@ -40,7 +42,7 @@ let {
         }
     }
 
-    testAsciitoString()
+    // testAsciitoString()
 
 
 // TEST function for Number => Binary
@@ -96,4 +98,50 @@ let {
 
 
 
+
 // **** INTEGRATION TESTS **** //
+
+// Message => Ascii Code
+    let name = 'Alson'
+
+    let asciiCodeArray = convertStringToAsciiCode(name)
+
+    console.log('Ascii Code Array:',asciiCodeArray)
+
+// Ascii Code (Number) => Binary
+    let binaryArray = []
+
+    for(let i = 0; i < asciiCodeArray.length; i++){
+        binaryArray.push(convertNumberToBinary(asciiCodeArray[i]))
+    }
+
+    console.log('Binary Array:',binaryArray)
+
+// Binary to Byte Array
+    let byteArray = []
+
+    for(let i = 0; i < binaryArray.length; i++){
+        byteArray.push(convertBinarytoByteArray(binaryArray[i]))
+    }
+
+    console.log('Byte Array:',byteArray)
+
+// Turn Byte array into string 
+    let byteString = byteArray.join('')
+    // console.log('Byte String:',byteString)
+
+// Byte Array string => encoder
+    let encodedString = encoder(byteString)
+    // console.log('Encoded Byte String:',encodedString)
+
+// ===============
+
+// Encoded String => Decoder
+    let decodedString = decoder(encodedString)
+    // console.log('Decoded String:',decodedString)
+
+// Decoded String => Byte Array
+    // console.log(convertBinarytoByteArray(decodedString))
+
+// Byte Array => Ascii Code
+// Ascii Code => Message

@@ -48,7 +48,7 @@ exports.convertNumberToBinary = (number) => {
 exports.convertBinarytoByteArray = (bin) => {
     let output = []
     let binArray = bin.split('')
-    
+
     for(let i = 0; i <= binArray.length / 8; i++){
         if (binArray.length > 8) {
             let index = binArray.length - 8
@@ -56,7 +56,7 @@ exports.convertBinarytoByteArray = (bin) => {
             binArray = binArray.splice(0, index)
         } 
     }
-    
+
     let size = 8 - binArray.length
     let binOut = binArray.join('')
 
