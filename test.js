@@ -47,8 +47,8 @@ let {encoder, decoder} = require('D:\\Code\\Personal Projects\\encoder-js\\funct
 
 // TEST function for Number => Binary
     let testNumbertoBinary = () => {
-        let testNumbers = [255, 0, 128, 64, 32, 16, 8, 4, 2, 1],
-        expectedOutput = ['11111111', '0', '10000000', '1000000', '100000', '10000', '1000', '100', '10', '1']
+        let testNumbers = [255, 128, 64, 32, 16, 8, 4, 2, 1],
+        expectedOutput = ['11111111', '10000000', '01000000', '00100000', '00010000', '00001000', '00000100', '00000010', '00000001']
         
         for(let i = 0; i < testNumbers.length; i++){
             if (convertNumberToBinary(testNumbers[i]) === expectedOutput[i]){
@@ -106,7 +106,7 @@ let {encoder, decoder} = require('D:\\Code\\Personal Projects\\encoder-js\\funct
 
     let asciiCodeArray = convertStringToAsciiCode(name)
 
-    console.log('Ascii Code Array:',asciiCodeArray)
+    // console.log('Ascii Code Array:',asciiCodeArray)
 
 // Ascii Code (Number) => Binary
     let binaryArray = []
@@ -115,7 +115,7 @@ let {encoder, decoder} = require('D:\\Code\\Personal Projects\\encoder-js\\funct
         binaryArray.push(convertNumberToBinary(asciiCodeArray[i]))
     }
 
-    console.log('Binary Array:',binaryArray)
+    // console.log('Binary Array:',binaryArray)
 
 // Binary to Byte Array
     let byteArray = []
@@ -124,7 +124,7 @@ let {encoder, decoder} = require('D:\\Code\\Personal Projects\\encoder-js\\funct
         byteArray.push(convertBinarytoByteArray(binaryArray[i]))
     }
 
-    console.log('Byte Array:',byteArray)
+    // console.log('Byte Array:',byteArray)
 
 // Turn Byte array into string 
     let byteString = byteArray.join('')
