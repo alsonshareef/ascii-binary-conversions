@@ -1,31 +1,13 @@
 
-// String => Ascii
-exports.convertStringToAsciiCode = (word) => {
-    let output = []
-    for(let i = 0; i < word.length; i++){
-        output.push(word.charCodeAt(i).toString())
-    }
-    return output
-}
+// ** THIS FILE WAS USED TO DEBUG functions
 
-
-// Ascii => String
-exports.convertAsciiCodeToString = (...ascii) => {
-    let output = []
-    for(let i = 0; i < ascii.length; i++){
-        output.push(String.fromCharCode(ascii[i]))
-    }
-    return output
-}
-
-
-// Number => Binary
-exports.convertNumberToBinary = (number) => {
+let convertNumbertoBinary = (number) => {
     let index = Math.floor(Math.log2(number))
     let operator = Math.pow(2, index)
     let bin = ''
     let unused = 7 - index
 
+    // This loop ensures that any unused criteria will have a '0' instead of no number, making the binary output always at least 8 numbers
     for (let j = 0; j < unused; j++) {
         bin += '0'
     }
@@ -48,12 +30,12 @@ exports.convertNumberToBinary = (number) => {
     return bin
 }
 
+// console.log(convertNumbertoBinary(12))
 
-// Binary => Byte Array
-exports.convertBinarytoByteArray = (bin) => {
+let convertBinarytoByteArray = (bin) => {
     let output = []
     let binArray = bin.split('')
-    let iterations = binArray.length
+    let iterations = binArray.length // Added this variable because binArray was being mutated and affecting the amount of iterations of the loop
 
     for(let i = 0; i <= iterations / 8; i++){
         if (binArray.length > 8) {
@@ -74,16 +56,4 @@ exports.convertBinarytoByteArray = (bin) => {
     return output.reverse()
 }
 
-
-// Binary => Number
-exports.convertBinaryToNumber = (bin) => {
-    let num = 0
-    let operator = Math.pow(2, bin.length - 1)
-    for(let i = 0; i < bin.length; i++){
-        if (bin[i] === '1') {
-            num += operator
-        }
-        operator /= 2
-    }
-    return num
-}
+console.log(convertBinarytoByteArray('0100000101101100011100110110111101101110'))
