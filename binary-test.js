@@ -1,3 +1,6 @@
+
+// ** THIS FILE WAS USED TO DEBUG convertNumbertoBinary
+
 let convertNumbertoBinary = (number) => {
     let index = Math.floor(Math.log2(number))
     let operator = Math.pow(2, index)

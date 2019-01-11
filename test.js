@@ -62,6 +62,22 @@ let {encoder, decoder} = require('D:\\Code\\Personal Projects\\encoder-js\\funct
 // testNumbertoBinary()
 
 
+//EXTRA TEST CASE: Number => Binary
+let testNumbertoBinary2 = () => {
+    let testNumbers = [255, 128, 64, 32, 16, 8, 4, 2, 1]
+        
+        for(let i = 0; i < testNumbers.length; i++){
+            if (convertNumberToBinary(testNumbers[i]).length >= 8){
+                console.log(`** PASSED ** The returned value from 'Number to Binary' function IS equal to or greater than 8`)
+            } else {
+                console.log(`** FAILED ** The returned value from 'Number to Binary' function IS NOT equal to or greater than 8`)
+            }
+        }
+}
+
+testNumbertoBinary2()
+
+
 // TEST Binary to Byte Array
     let testBinarytoByteArray = () => {
         let testBinaryNumbers = ['00000000000000000000', '10000000000000011000', '11000000000000111100', '11100000000001111110', '11110000000011111111', '11111000000111111111', '10101010101010101010'],
