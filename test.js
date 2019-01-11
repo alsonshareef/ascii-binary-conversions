@@ -121,70 +121,70 @@ let testNumbertoBinary2 = () => {
 // ========= ENCODING =========
 
 let integrationTest = () => {
-// Message => Ascii Code
-    let name = 'Alson'
+    // Message => Ascii Code
+        let name = 'Alson'
 
-    let asciiCodeArray = convertStringToAsciiCode(name)
+        let asciiCodeArray = convertStringToAsciiCode(name)
 
-    console.log('Initial message', name)
-    console.log('Ascii Code Array:',asciiCodeArray)
+        console.log('Initial message', name)
+        console.log('Ascii Code Array:',asciiCodeArray)
 
-// Ascii Code (Number) => Binary
-    let binaryArray = []
+    // Ascii Code (Number) => Binary
+        let binaryArray = []
 
-    for(let i = 0; i < asciiCodeArray.length; i++){
-        binaryArray.push(convertNumberToBinary(asciiCodeArray[i]))
-    }
+        for(let i = 0; i < asciiCodeArray.length; i++){
+            binaryArray.push(convertNumberToBinary(asciiCodeArray[i]))
+        }
 
-    console.log('Binary Array:',binaryArray)
+        console.log('Binary Array:',binaryArray)
 
-// Binary to Byte Array
-    let byteArray = []
+    // Binary to Byte Array
+        let byteArray = []
 
-    for(let i = 0; i < binaryArray.length; i++){
-        byteArray.push(convertBinarytoByteArray(binaryArray[i]))
-    }
+        for(let i = 0; i < binaryArray.length; i++){
+            byteArray.push(convertBinarytoByteArray(binaryArray[i]))
+        }
 
-    console.log('Byte Array:', '\n', byteArray)
+        console.log('Byte Array:', '\n', byteArray)
 
-// Turn Byte array into string 
-    let byteString = byteArray.join('')
-    console.log('Byte String:',byteString)
+    // Turn Byte array into string 
+        let byteString = byteArray.join('')
+        console.log('Byte String:',byteString)
 
-// Byte Array string => encoder
-    let encodedString = encoder(byteString)
-    console.log('Encoded Byte String:',encodedString)
+    // Byte Array string => encoder
+        let encodedString = encoder(byteString)
+        console.log('Encoded Byte String:',encodedString)
 
-// ======== DECODING =========
+    // ======== DECODING =========
 
-// Encoded String => Decoder
-    let decodedString = decoder(encodedString)
-    console.log('Decoded String:',decodedString)
+    // Encoded String => Decoder
+        let decodedString = decoder(encodedString)
+        console.log('Decoded String:',decodedString)
 
-// Decoded String => Byte Array
-    let byteArrayfromDecode = convertBinarytoByteArray(decodedString)
-    console.log('Byte Array from decoded String',byteArrayfromDecode)
+    // Decoded String => Byte Array
+        let byteArrayfromDecode = convertBinarytoByteArray(decodedString)
+        console.log('Byte Array from decoded String',byteArrayfromDecode)
 
-// Byte Array => Ascii Code
-    let asciiCodefromDecode = []
+    // Byte Array => Ascii Code
+        let asciiCodefromDecode = []
 
-    for(let i = 0; i < byteArrayfromDecode.length; i++){
-        asciiCodefromDecode.push(convertBinaryToNumber(byteArrayfromDecode[i]))
-    }
+        for(let i = 0; i < byteArrayfromDecode.length; i++){
+            asciiCodefromDecode.push(convertBinaryToNumber(byteArrayfromDecode[i]))
+        }
 
-    console.log('Ascii Code from decoded byte array',asciiCodefromDecode)
+        console.log('Ascii Code from decoded byte array',asciiCodefromDecode)
 
-// Ascii Code => Message
+    // Ascii Code => Message
 
-    let decodedMessage = []
+        let decodedMessage = []
 
-    for(let i = 0; i < asciiCodefromDecode.length; i++){
-        decodedMessage.push(convertAsciiCodeToString(asciiCodefromDecode[i]))
-    }
+        for(let i = 0; i < asciiCodefromDecode.length; i++){
+            decodedMessage.push(convertAsciiCodeToString(asciiCodefromDecode[i]))
+        }
 
-    decodedMessage = decodedMessage.join('')
+        decodedMessage = decodedMessage.join('')
 
-    console.log('The decoded message is:', decodedMessage)
+        console.log('The decoded message is:', decodedMessage)
 }
 
 integrationTest()
